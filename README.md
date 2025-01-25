@@ -252,3 +252,78 @@
 - Computationally intensive, especially for large datasets.
 - Approximations may break down for very deep networks.
 - Assumes model smoothness, which may not hold for all architectures.
+
+## Natural Language Explanations
+
+**Paper Title:** Generating Natural Language Explanations for Visual Question Answering Using Scene Graphs and Visual Attention
+
+**Link to Paper:** [View Paper](https://arxiv.org/abs/1902.05715)
+
+**Summary of Approach:** The model generates textual explanations for its decisions, which can be more intuitive for users.
+
+**Details of Approach:**
+- Trains an additional model to generate explanations.
+- Often uses attention mechanisms to focus on relevant parts of the input.
+- Can be integrated with other interpretation methods.
+
+**Performance:** Natural language explanations have shown promise in improving user trust and understanding, particularly in human-AI interaction scenarios.
+
+**Pros:**
+- Provides intuitive, human-readable explanations.
+- Can incorporate domain knowledge in explanation generation.
+- Potentially more accessible to non-technical users.
+
+**Cons:**
+- Quality of explanations depends heavily on how well the explanation model is trained.
+- Might generate plausible but incorrect explanations.
+- Difficult to evaluate the accuracy of generated explanations.
+
+## Model Distillation
+
+**Paper Title:** Distilling the Knowledge in a Neural Network
+
+**Link to Paper:** [View Paper](https://arxiv.org/abs/1503.02531)
+
+**Summary of Approach:** Translates a complex model's behavior into a simpler model that is easier to interpret.
+
+**Details of Approach:**
+- Trains a smaller, simpler model to mimic the behavior of a larger, complex model.
+- Often uses the soft outputs (probabilities) of the complex model as training targets.
+- Can be combined with other interpretability methods applied to the distilled model.
+
+**Performance:** Model distillation has been successful in creating more efficient models while preserving performance, and has shown promise for interpretability in various domains.
+
+**Pros:**
+- Creates a more interpretable model.
+- Can maintain much of the performance of the original model.
+- Useful for model compression and deployment.
+
+**Cons:**
+- The distilled model may not perfectly replicate the behavior of the original.
+- Can lead to potential discrepancies in interpretation.
+- The choice of distillation architecture can significantly impact results.
+
+## Probing Tasks
+
+**Paper Title:** What do you learn from context? Probing for sentence structure in contextualized word representations
+
+**Link to Paper:** [View Paper](https://arxiv.org/abs/1905.06316)
+
+**Summary of Approach:** Uses auxiliary tasks to probe the representations and capabilities of different layers in the model, providing insights into what the model has learned.
+
+**Details of Approach:**
+- Designs specific tasks to test for the presence of certain types of information.
+- Trains simple classifiers on frozen representations from different layers.
+- Analyzes performance on these tasks to infer model capabilities.
+
+**Performance:** Probing tasks have been particularly useful in understanding the hierarchical nature of representations in large language models.
+
+**Pros:**
+- Provides targeted insights into model representations.
+- Can reveal unexpected capabilities or limitations of the model.
+- Useful for comparing different model architectures.
+
+**Cons:**
+- The choice of probing tasks can be somewhat arbitrary.
+- May not fully capture the model's nuances.
+- Results can be sensitive to the design of probing classifiers.
